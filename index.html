@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Calculator</title>
+</head>
+<body>
+    <h1>Date Calculator</h1>
+    <form method="post">
+        <label for="date">Enter date (MM/DD/YYYY): </label>
+        <input type="text" name="date" required><br>
+        <label for="time">Enter time (HH:MM): </label>
+        <input type="text" name="time" required><br>
+        <label for="ampm">Enter AM or PM: </label>
+        <input type="text" name="ampm" required><br>
+        <label for="hours">Enter number of hours to add: </label>
+        <input type="number" name="hours" required><br>
+        <input type="submit" value="Calculate">
+    </form>
+    {% if result %}
+    <p>Date and time {{ hours }} hours later: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
